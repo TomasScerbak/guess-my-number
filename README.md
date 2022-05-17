@@ -41,8 +41,6 @@ Users should be able to:
 
 I learned how to use ternary operator and also how to style and change HTML elements on event.
 
-From the HTML persective, I learned to provide to user different img quality depending on device using WEBP format and @2x formats for RETINA displey.
-
 To see how you can add code snippets, see below:
 
 ```js
