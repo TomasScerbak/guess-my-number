@@ -34,24 +34,16 @@ btnCheck.addEventListener('click', function() {
             highScore = score;
             highScoreElement.textContent = highScore;
         }
-
-    } else if (guess < secretNumber) {
-        if (score > 0) {
-            message.innerHTML = `Number to LOW!`;
+  
+    } else if (guess !== secretNumber) {
+        if (score > 1) {
+            message.innerHTML = guess > secretNumber ? 'Number to HIGH!' : 'Number to LOW!'
             score--;
             scoreElement.innerHTML = score;
         } else {
             message.innerHTML = `🤯💥 You lose the GAME!`;
         }
-    } else if (guess > secretNumber) {
-        if(score > 0) {
-            message.innerHTML = `Number to HIGH!`;
-            score--;
-            scoreElement.innerHTML = score;
-        } else {
-            message.innerHTML = `🤯💥 You lose the GAME!`;
-        }
-    } 
+    }
 })
 
 // Restoring default values when clicked on AGAIN button
