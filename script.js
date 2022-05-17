@@ -11,9 +11,8 @@ let highScore = document.querySelector('.label-highscore');
 const body = document.querySelector('body');
 
 // Generating random number
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
-
-console.log(secretNumber);
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+console.log(secretNumber)
 
 // Declaring score variable to count down each attempt
 let score = 20;
@@ -51,9 +50,12 @@ btnCheck.addEventListener('click', function() {
 
 // Restoring default values when clicked on AGAIN button
 btnAgain.addEventListener('click', function() {
+    score = 20;
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
     message.innerHTML = 'Start guessing...';
     number.innerHTML = '?';
     body.style.backgroundColor = '#222';
     number.style.width = '15rem';
     guessInput.value = '';
+    scoreElement.innerHTML = score;
 })
