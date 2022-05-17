@@ -6,14 +6,15 @@ const number = document.querySelector('.number');
 const guessInput = document.querySelector('.guess');
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
-let scoreElement = document.querySelector('.score');
-let highScoreElement = document.querySelector('.highscore');
+const scoreElement = document.querySelector('.score');
+const highScoreElement = document.querySelector('.highscore');
 const body = document.querySelector('body');
 
 // Generating random number
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // Declaring score variable to count down each attempt
 let score = 20;
+//Declaring high score variable to add the best score to it
 let highScore = 0;
 
 // Adding even listener to check button and display message according user input and changing background color when WIN.
