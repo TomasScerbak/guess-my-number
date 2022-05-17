@@ -1,0 +1,35 @@
+[33mcommit d6b470176144287c80476beec5eb9f8663a3b7fd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Tomas Scerbak <tomas.scerbak@gmail.com>
+Date:   Tue May 17 12:46:30 2022 +0200
+
+    refactoring again button
+
+[33mcommit 4de818694d7e6997babf6d3fc3feab2367ec1209[m
+Author: Tomas Scerbak <tomas.scerbak@gmail.com>
+Date:   Tue May 17 12:31:56 2022 +0200
+
+    implementing again button
+
+[33mcommit ce23184672e1977ab29a97be37d2124e73eb1919[m
+Author: Tomas Scerbak <tomas.scerbak@gmail.com>
+Date:   Tue May 17 12:12:03 2022 +0200
+
+    background color chande of the body if player wins
+
+[33mcommit 0ed6906a1ce2c68af27239a827dd0f8a31f5d0e8[m
+Author: Tomas Scerbak <tomas.scerbak@gmail.com>
+Date:   Mon May 16 13:20:49 2022 +0200
+
+    creating checkbutton event listener
+
+[33mcommit 760d45cf03d91fe367478435ac5e697ae9935cd2[m
+Author: Tomas Scerbak <tomas.scerbak@gmail.com>
+Date:   Mon May 16 12:23:12 2022 +0200
+
+    grabbing DOM elements
+
+[33mcommit cdde6766139f6762a833ec42080503d5cde3aa2d[m
+Author: Tomas Scerbak <tomas.scerbak@gmail.com>
+Date:   Mon May 16 12:02:56 2022 +0200
+
+    adding files with starting code

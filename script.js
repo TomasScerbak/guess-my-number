@@ -7,15 +7,14 @@ const guessInput = document.querySelector('.guess');
 const btnCheck = document.querySelector('.check');
 const btnAgain = document.querySelector('.again');
 let scoreElement = document.querySelector('.score');
-let highScore = document.querySelector('.label-highscore');
+let highScoreElement = document.querySelector('.highscore');
 const body = document.querySelector('body');
 
 // Generating random number
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(secretNumber)
-
 // Declaring score variable to count down each attempt
 let score = 20;
+let highScore = 0;
 
 // Adding even listener to check button and display message according user input and changing background color when WIN.
 btnCheck.addEventListener('click', function() {
@@ -29,6 +28,12 @@ btnCheck.addEventListener('click', function() {
         number.innerHTML = secretNumber;
         body.style.backgroundColor = '#60b347';
         number.style.width = '30rem';
+
+        if(score > highScore) {
+            highScore = score;
+            highScoreElement.textContent = highScore;
+        }
+
     } else if (guess < secretNumber) {
         if (score > 0) {
             message.innerHTML = `Number to LOW!`;
@@ -50,8 +55,8 @@ btnCheck.addEventListener('click', function() {
 
 // Restoring default values when clicked on AGAIN button
 btnAgain.addEventListener('click', function() {
-    score = 20;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
+    score = 20;
     message.innerHTML = 'Start guessing...';
     number.innerHTML = '?';
     body.style.backgroundColor = '#222';
