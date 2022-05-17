@@ -5,11 +5,14 @@ const message = document.querySelector('.message');
 const number = document.querySelector('.number');
 const guessInput = document.querySelector('.guess');
 const btnCheck = document.querySelector('.check');
+const btnAgain = document.querySelector('.again');
 let scoreElement = document.querySelector('.score');
+let highScore = document.querySelector('.label-highscore');
 const body = document.querySelector('body');
 
 // Generating random number
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
+
 console.log(secretNumber);
 
 // Declaring score variable to count down each attempt
@@ -26,6 +29,7 @@ btnCheck.addEventListener('click', function() {
         message.innerHTML = `👍👏 Correct Number!`;
         number.innerHTML = secretNumber;
         body.style.backgroundColor = '#60b347';
+        number.style.width = '30rem';
     } else if (guess < secretNumber) {
         if (score > 0) {
             message.innerHTML = `Number to LOW!`;
@@ -45,4 +49,11 @@ btnCheck.addEventListener('click', function() {
     } 
 })
 
-
+// Restoring default values when clicked on AGAIN button
+btnAgain.addEventListener('click', function() {
+    message.innerHTML = 'Start guessing...';
+    number.innerHTML = '?';
+    body.style.backgroundColor = '#222';
+    number.style.width = '15rem';
+    guessInput.value = '';
+})
